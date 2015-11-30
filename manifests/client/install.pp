@@ -55,7 +55,7 @@ class omd::client::install {
   }
 
   package { 'check_mk-agent':
-    ensure   => installed,
+    ensure   => $omd::client::check_mk_version,
     name     => $omd::client::package_name,
     source   => $pkg_source_agent,
     provider => $pkg_provider,
