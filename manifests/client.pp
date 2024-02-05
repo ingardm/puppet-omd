@@ -85,16 +85,16 @@ class omd::client (
   $user             = $omd::client::params::user,
   $group            = $omd::client::params::group,
 ) inherits omd::client::params {
-  validate_string($check_mk_version)
-  validate_string($package_name)
-  validate_string($download_source)
-  validate_bool($download_package)
-  validate_re($xinetd_disable, ['^yes$','^no$'])
-  validate_string($check_only_from)
-  validate_absolute_path($check_agent)
-  validate_hash($hosts)
-  validate_string($user)
-  validate_string($group)
+#  validate_string($check_mk_version)
+#  validate_string($package_name)
+#  validate_string($download_source)
+#  validate_bool($download_package)
+#  validate_re($xinetd_disable, ['^yes$','^no$'])
+#  validate_string($check_only_from)
+#  validate_absolute_path($check_agent)
+#  validate_hash($hosts)
+#  validate_string($user)
+#  validate_string($group)
 
   contain omd::client::install
   contain omd::client::config
