@@ -39,7 +39,7 @@ define omd::host (
   $tags           = [],
   $cluster_member = false,
 ) {
-  validate_re($name, '^\w+$')
+  #validate_re($name, '^\w+$')
   # folder/tags are validated in subclass omd::client::export
 
   include 'omd::client'
